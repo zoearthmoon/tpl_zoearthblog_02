@@ -44,6 +44,7 @@
 		<position>TOP-MENU</position>
         <position>TOP-BANNER</position>
 		<position>INDEX-CENTER-LEFT</position>
+        <position>INDEX-CENTER-RIGHT</position>
 		<position>INDEX-CENTER-CENTER</position>
         <position>INDEX-CENTER-BOTTOM</position>
         <position>BREADCRUME</position>
@@ -54,17 +55,22 @@
         <position>PAGE-BOTTOM-LEFT</position>
 		<position>PAGE-BOTTOM-CENTER</position>
         <position>PAGE-BOTTOM-RIGHT</position>
+        <position>PAGE-BOTTOM-FOOTER</position>
 	</positions>
 
 	<languages folder="language">
-		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthblog_01.ini</language>
-		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthblog_01.sys.ini</language>
+        
+        <language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthblog_02.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthblog_02.sys.ini</language>
+        
+		<language tag="en-GB">en-GB/en-GB.tpl_zoearthblog_02.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_zoearthblog_02.sys.ini</language>
 	</languages>
 
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
-				<field name="favicon" type="media" default="" label="TPL_Z2B01_TOP_LEFT_LOGO" />
+				<field name="favicon" type="media" default="" label="TPL_Z2B02_TOP_LEFT_LOGO" />
                 <field name="gacode" type="textarea" filter="raw" default="" label="TPL_GACODE" />
 			</fieldset>
 		</fields>

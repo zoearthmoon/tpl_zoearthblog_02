@@ -1,8 +1,4 @@
 <?php
-/**
- * @zoearth
- */
-
 defined('_JEXEC') or die;
 ?>
 <!DOCTYPE html> 
@@ -11,26 +7,54 @@ defined('_JEXEC') or die;
     <jdoc:include type="head" />
     <?php echo $favicon;?>
     <?php echo $this->params->get('gacode');?>
-    <!--[if lte IE 8]><script src="<?php echo $tmpUrl;?>css/ie/html5shiv.js"></script><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo $tmpUrl;?>css/ie/v8.css" /><![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" href="<?php echo $tmpUrl;?>css/style-ie.css"/>
+    <![endif]--> 
+    
 </head>
-<body>
-    <input type="hidden" id="basePath" value="<?php echo $tmpUrl;?>">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <jdoc:include type="modules" name="TOP-MENU" />
+<body class="home">
+    <div class="color-bar-1"></div>
+    <div class="color-bar-2 color-bg"></div>
+    <div class="container">
+        <div class="row header">
+            <div class="span5 logo">
+                <jdoc:include type="modules" name="TOP-LOGO" />
+            </div>
+            <div class="span7 navigation">
+                <jdoc:include type="modules" name="TOP-MENU" />
+            </div>
         </div>
-    </nav>
-    <jdoc:include type="modules" name="INDEX-CENTER-CENTER" />
-    <jdoc:include type="modules" name="INDEX-CENTER-BOTTOM" />
-    <footer id="footer">
-        <div class="actions">
-            <jdoc:include type="modules" name="PAGE-BOTTOM-LEFT" />
+        <div class="row headline">
+            <div class="span8">
+                <jdoc:include type="modules" name="INDEX-CENTER-LEFT" />
+            </div>
+            <div class="span4">
+                <jdoc:include type="modules" name="INDEX-CENTER-RIGHT" />
+            </div>
         </div>
-        <div class="menu text-right">
-            <jdoc:include type="modules" name="PAGE-BOTTOM-RIGHT" />
+        <div class="row gallery-row">
+            <jdoc:include type="modules" name="INDEX-CENTER-CENTER" />
         </div>
-    </footer>
-    <jdoc:include type="modules" name="debug" />
+        <div class="row">
+            <jdoc:include type="modules" name="INDEX-CENTER-BOTTOM" />
+        </div>
+    </div>
+	<div class="footer-container">
+        <div class="container">
+            <div class="row footer-row">
+                <jdoc:include type="modules" name="PAGE-BOTTOM-CENTER" />
+            </div>
+
+            <div class="row">
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <jdoc:include type="modules" name="PAGE-BOTTOM-FOOTER" />                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
 </body>
-</html>
