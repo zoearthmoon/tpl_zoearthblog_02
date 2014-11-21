@@ -10,8 +10,7 @@ defined('_JEXEC') or die;
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <link rel="stylesheet" href="<?php echo $tmpUrl;?>css/style-ie.css"/>
-    <![endif]--> 
-    
+    <![endif]-->
 </head>
 <body class="home">
     <div class="color-bar-1"></div>
@@ -57,4 +56,5 @@ defined('_JEXEC') or die;
         </div>
     </div>
     <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+    <jdoc:include type="modules" name="debug" />
 </body>
