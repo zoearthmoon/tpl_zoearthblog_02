@@ -11,23 +11,26 @@ $menu = $menus[key($menus)];
     <div id="blogCarousel" class="carousel slide ">
         <div class="carousel-inner">
         <?php if (count($menu['menus']) > 0):?>
-        <?php foreach ($menu['menus'] as $menuC):?>
-            <div class="active item">
-                <?php if (Z2HelperImage::exist($menuC['image'])):?>
-                <a href="blog-single.htm">
+        <?php foreach ($menu['menus'] as $key=>$menuC):?>
+            <?php if (Z2HelperImage::exist($menuC['image'])):?>
+            <div class="<?php echo $key == 0 ? 'active':'' ?> item">
+                <a href="<?php echo $menuC['link']?>">
                     <img src="<?php echo Z2HelperImage::_($menuC['image'],370,220,'F')?>" alt="<?php echo $menuC['name']?>" class="align-left blog-thumb-preview" />
                 </a>
-                <?php endif;?>
                 <div class="post-info clearfix">
                     <h4>
                         <a href="<?php echo $menuC['link']?>"><?php echo $menuC['name']?></a>
                     </h4>
                     <ul class="blog-details-preview">
-                        <li><i class="icon-calendar"></i><strong><?php echo JText::_('TPL_Z2B02_DATE')?>:</strong><?php echo $menuC['created']?><li>
-                        <li><i class="icon-tags"></i>
-                            <a href="#">photoshop</a>, 
-                            <a href="#">tutorials</a>, 
-                            <a href="#">illustration</a>
+                        <li><i class="icon-calendar"></i><strong><?php echo JText::_('TPL_Z2B02_DATE')?>:</strong><?php echo JHtml::_('date',$menuC['created'],'Y/m/d')?><li>
+                        <?php if (count($tags) > 0 ):?>
+                        <li>
+                        <i class="icon-tags"></i>
+                        <?php foreach ($tags as $key=>$tag):?>
+                            <?php echo $key>0 ? ', ':''?>
+                            <a href="<?php echo $tag['link']?>"><?php echo $tag['name']?></a>
+                        <?php endforeach;?>
+                        <?php endif;?>
                         </li>
                     </ul>
                 </div>
@@ -36,6 +39,7 @@ $menu = $menus[key($menus)];
                     <a href="<?php echo $menuC['link']?>"><?php echo JText::_('TPL_Z2B02_READ_MORE')?></a>
                 <p>
             </div>
+            <?php endif;?>
         <?php endforeach;?>
         <?php endif;?>
         </div>
@@ -44,10 +48,10 @@ $menu = $menus[key($menus)];
 <script type="text/javascript">
 jQuery(document).ready(function () {
     jQuery("#btn-blog-next").click(function () {
-        jQuery('#blogCarousel').carousel('next')
+        jQuery('#blogCarousel').carousel('next');
     });
     jQuery("#btn-blog-prev").click(function () {
-        jQuery('#blogCarousel').carousel('prev')
+        jQuery('#blogCarousel').carousel('prev');
     });
 });
 </script>

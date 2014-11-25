@@ -18,8 +18,8 @@ body {background: #f9f9f9 url(../img/page-bg-1.jpg);}
 
 /***** Titles and Headings *****/
 h1, h2, h3, h4 , h5, h6 {
-	font-family: "Oswald", sans-serif;
-	font-weight: normal;
+	font-family: "Dosis", sans-serif;
+	/*font-weight: normal;*/
 	/*text-transform:uppercase;*/ 
 }	
 h1, h2, h3, h4, h5 
@@ -86,7 +86,7 @@ blockquote.pull-right {border-right: 5px solid #999;}
 	border-top: 1px dotted #a9a9a9;
 }
 .navbar .nav > li > a { 
-	font-family: "Oswald", sans-serif; 
+	font-family: "Dosis", sans-serif; 
 	font-weight: normal;
 	text-shadow: none; 
 	text-transform:uppercase; 
@@ -118,7 +118,7 @@ blockquote.pull-right {border-right: 5px solid #999;}
 
 ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; }
 .dropdown-menu{
-	font-family: "Oswald", sans-serif; 
+	font-family: "Dosis", sans-serif; 
 	font-weight: normal;
 	text-transform:uppercase; 
 	font-size:16px;
@@ -303,7 +303,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; }
 	font-style: normal;
 	text-shadow:none;
 	display: block;
-	font-family: "Oswald", sans-serif; 
+	font-family: "Dosis", sans-serif; 
 	font-weight: normal;
 	text-transform:uppercase; 
 }
@@ -348,7 +348,7 @@ a.item-zoom-link:hover {background: #d8450b url(../img/gallery-item-icons.png) n
 a.item-details-link:hover {background: #d8450b url(../img/gallery-item-icons.png) no-repeat; background-position: -42px 0px;}
 
 .gallery-post-grid {margin:0px;}
-.gallery-post-grid li {list-style: none; float: left; margin-bottom: 30px;}
+.gallery-post-grid li {height: 250px;list-style: none; float: left; margin-bottom: 30px;}
 
 .gallery-cats {margin: 0px 0px 20px 0px;}
 .gallery-cats li{
@@ -451,7 +451,7 @@ ul.post-data li:last-child {padding-right: 0px;}
 	font-style: italic;
 }
 .blog-post-hover a{
-	font-family: "Oswald", sans-serif; 
+	font-family: "Dosis", sans-serif; 
 	font-weight: normal;
 	text-transform:uppercase; 
 	font-size: 28px;
@@ -499,7 +499,7 @@ ul.post-data li:last-child {padding-right: 0px;}
 
 .comments ul li img {margin:0px 10px 10px 0px;}
 .comment-name {
-	font-family: "Oswald", sans-serif; 
+	font-family: "Dosis", sans-serif; 
 	font-weight: normal;
 	text-transform:uppercase; 
 }
@@ -531,7 +531,7 @@ ul.post-data li:last-child {padding-right: 0px;}
 	padding:10px 5px;
 }
 .sidebar ul.post-category-list li a{
-	font-family: "Oswald", sans-serif; 
+	font-family: "Dosis", sans-serif; 
 	font-weight: normal;
 	text-transform:uppercase; 
 }
@@ -576,8 +576,8 @@ p.side {margin-bottom: 20px;}
 	width:100%;
 	background:#333;
 	clear: both;
- 	position: relative;
- 	z-index: 10;
+ 	/*position: relative;*/
+ 	/*z-index: 10;*/
 }
 .footer-row { margin-top: 30px;}
 .footer-col {color:#ababab; font-size: 11px;}
@@ -647,7 +647,7 @@ a.forrst:hover {background-position: -208px -47px;}
 /**************************************
 / MISC
 **************************************/
-.row {/*margin-bottom:40px;*/}
+.row {margin-bottom:15px;}
 .sub-row30 {margin-bottom:30px;}
 .sub-row20 {margin-bottom:20px;}
 .no-margin {margin-bottom:0px;}
@@ -688,7 +688,7 @@ a.accordion-toggle{background: #f5f5f5;}
 
 /***** Lightbox *****/
 #lightbox-image-details-caption {
-	font-family: "Oswald", sans-serif; 
+	font-family: "Dosis", sans-serif; 
 	font-weight: normal;
 	text-transform:uppercase;
 	font-size: 14px;

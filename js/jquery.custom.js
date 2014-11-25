@@ -88,15 +88,15 @@ function imgfeedHover() {
  $('h5.title-bg').has('button').css("padding-bottom", "12px");
 
 ////////// prettyPhoto ////////// 
-callprettyPhoto();
-function callprettyPhoto() {
-	// Work around for PrettyPhoto HTML Validation //
-	$('.gallery-icons a[data-rel]').each(function() {
-		$(this).attr('rel', $(this).data('rel'));
-	});
-
-	$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false });
-}
+//callprettyPhoto();
+//function callprettyPhoto() {
+//	// Work around for PrettyPhoto HTML Validation //
+//	$('.gallery-icons a[data-rel]').each(function() {
+//		$(this).attr('rel', $(this).data('rel'));
+//	});
+//
+//	$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false });
+//}
 
 ////////// Back to Top //////////
 	$(function() {

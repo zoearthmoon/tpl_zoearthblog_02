@@ -37,15 +37,13 @@ else
             </div>
         </div>
         <div class="row">
-            <div class="span12 breadcrumb">
-                <jdoc:include type="modules" name="BREADCRUME" />
-            </div>
             <?php if ($this->countModules('MAIN-LEFT') > 0 ):?>
             <div class="span4 sidebar page-sidebar">
                 <jdoc:include type="modules" name="MAIN-LEFT" />
             </div>
             <?php endif;?>
-            <div class="<?php echo $mainSpan;?> blog">
+            <div class="span<?php echo $mainSpan;?> blog">
+                <jdoc:include type="modules" name="BREADCRUME" />
         		<jdoc:include type="modules" name="MAIN-TOP" />
                 <jdoc:include type="message" />
                 <jdoc:include type="component" />

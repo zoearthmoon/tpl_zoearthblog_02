@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 <?php foreach ($menus as $key=>$menu):?>
 <div class="span12">
 <h5 class="title-bg"><?php echo $menu['name']?> 
-    <small><?php echo $menu['extra_fields']['addTitle']?></small>
+    <small><?php echo Z2HelperUtilities::characterLimit($menu['description'])?></small>
     <a class="btn btn-mini btn-inverse hidden-phone" href="<?php echo $menu['link']?>"><?php echo JText::_('TPL_Z2B02_READ_MORE')?></a>
 </h5>
 <div class="row clearfix no-margin">
@@ -15,15 +15,16 @@ defined('_JEXEC') or die;
         <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
             <span class="gallery-hover-4col hidden-phone hidden-tablet">
                 <span class="gallery-icons">
-                    <a href="<?php echo Z2HelperImage::_($menuC['image']);?>" class="icon-zoom-in item-zoom-link lightbox" title="<?php echo $menuC['name']?>" data-rel="prettyPhoto"></a>
+                    <a rel="lightbox" href="<?php echo Z2HelperImage::_($menuC['image']);?>" class="icon-zoom-in item-zoom-link" title="<?php echo $menuC['name']?>" >
+                        <img src="<?php echo Z2HelperImage::_('none');?>" >
+                    </a>
                     <a href="<?php echo $menuC['link']?>" class="item-details-link"></a>
                 </span>
             </span>
-            <a href="<?php echo $menuC['link']?>">
-                <img src="<?php echo Z2HelperImage::_($menuC['image'],270,220,'F');?>" alt="<?php echo $menuC['name']?>">
-            </a>
+            <img src="<?php echo Z2HelperImage::_($menuC['image'],270,220,'F');?>" alt="<?php echo $menuC['name']?>">
             <span class="project-details">
-                <a href="<?php echo $menuC['link']?>"><?php echo $menuC['name']?></a>For an international ad campaign.
+                <a href="<?php echo $menuC['link']?>"><?php echo $menuC['name']?></a>
+                <?php echo Z2HelperUtilities::characterLimit($menuC['description'],20)?>
             </span>
         </li>
         <?php endif;?>

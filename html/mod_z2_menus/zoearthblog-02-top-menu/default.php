@@ -3,7 +3,7 @@ defined('_JEXEC') or die;
 $optionHtml = '';
 ?>
 <div class="navbar hidden-phone">
-<ul class="nav">
+<ul id="main-menu" class="nav">
 <?php foreach ($menus as $key=>$menu):?>
     <li class="dropdown <?php echo $menu['active'] ? 'active':'' ?>">
         <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo $menu['link']?>">
@@ -31,7 +31,7 @@ $optionHtml = '';
 </div>
 <form action="#" id="mobile-nav" class="visible-phone">
     <div class="mobile-nav-select">
-    <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+    <select id="mobile-nav-select" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
         <option value="">-- --</option>
         <?php echo $optionHtml;?>
     </select>

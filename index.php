@@ -24,14 +24,30 @@ $document = JFactory::getDocument();
 $headData = $document->getHeadData();
 
 $scripts = $headData['scripts'];
-unset($scripts['/media/jui/js/chosen.jquery.min.js']);
-unset($scripts['/media/jui/js/bootstrap.min.js']);
+$newScripts = array();
 
-unset($scripts['/media/system/js/modal.js']);//20140915 zoearth 取消mootools
-unset($scripts['/media/system/js/mootools-core.js']);
-unset($scripts['/media/system/js/mootools-more.js']);
+$noJs = array();
+$noJs[] = 'chosen.jquery.min.js';
+$noJs[] = 'js/modal.js';
+$noJs[] = 'js/mootools-core.js';
+$noJs[] = 'js/mootools-more.js';
+foreach ($scripts as $js=>$v)
+{
+    $goJs = TRUE;
+    foreach ($noJs as $findJs)
+    {
+        if (strpos($js, $findJs))
+        {
+            $goJs = FALSE;
+        }
+    }
+    if ($goJs)
+    {
+        $newScripts[$js] = $v;
+    }
+}
 
-$headData['scripts'] = $scripts;
+$headData['scripts'] = $newScripts;
 
 $styleSheets = $headData['styleSheets'];
 unset($styleSheets['/media/system/css/modal.css']);
