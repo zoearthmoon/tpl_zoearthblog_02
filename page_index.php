@@ -55,6 +55,5 @@ defined('_JEXEC') or die;
             
         </div>
     </div>
-    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
     <jdoc:include type="modules" name="debug" />
 </body>

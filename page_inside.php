@@ -27,7 +27,7 @@ else
 <body class="home">
     <div class="color-bar-1"></div>
     <div class="color-bar-2 color-bg"></div>
-    <div class="container main-container">
+    <div class="container">
         <div class="row header">
             <div class="span5 logo">
                 <jdoc:include type="modules" name="TOP-LOGO" />
@@ -38,11 +38,11 @@ else
         </div>
         <div class="row">
             <?php if ($this->countModules('MAIN-LEFT') > 0 ):?>
-            <div class="span4 sidebar page-sidebar">
+            <div class="pageC span4 sidebar page-sidebar">
                 <jdoc:include type="modules" name="MAIN-LEFT" />
             </div>
             <?php endif;?>
-            <div class="span<?php echo $mainSpan;?> blog">
+            <div class="pageM span<?php echo $mainSpan;?> blog">
                 <jdoc:include type="modules" name="BREADCRUME" />
         		<jdoc:include type="modules" name="MAIN-TOP" />
                 <jdoc:include type="message" />
@@ -50,7 +50,7 @@ else
         		<jdoc:include type="modules" name="MAIN-BOTTOM" />
             </div>
             <?php if ($this->countModules('MAIN-RIGHT') > 0 ):?>
-            <div class="span4 sidebar page-sidebar">
+            <div class="pageC span4 sidebar page-sidebar">
                 <jdoc:include type="modules" name="MAIN-RIGHT" />
             </div>
             <?php endif;?>
@@ -72,7 +72,6 @@ else
             
         </div>
     </div>
-    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
     <jdoc:include type="modules" name="debug" />
 </body>
 </html>
