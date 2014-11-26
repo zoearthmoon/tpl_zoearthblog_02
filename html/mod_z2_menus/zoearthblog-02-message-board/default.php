@@ -3,13 +3,13 @@ defined('_JEXEC') or die;
 ?>
 <?php $i=0;?>
 <?php foreach ($menus as $menu):?>
-<section id="contact" class="comments main style3 secondary">
-    <div class="content container">
+<section id="contact" class="comments main style3 secondary thumbnail " style="padding: 0 25px 0 25px">
+    
         <header>
             <h2><?php echo $menu['name'];?></h2>
             <?php echo $menu['description'];?>
         </header>
-        <div class="box container small">
+        
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -25,7 +25,7 @@ defined('_JEXEC') or die;
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-        </div>
-    </div>
+        
+    
 </section>
 <?php endforeach; ?>
