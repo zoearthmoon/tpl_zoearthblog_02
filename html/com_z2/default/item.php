@@ -8,7 +8,7 @@ defined('_JEXEC') or die;
     <div class="post-content">
         <?php if (Z2HelperImage::exist($this->item->image)):?>
             <a rel="lightbox" href="<?php echo Z2HelperImage::_($this->item->image); ?>" title="<?php echo $this->item->image_caption; ?>" alt="<?php echo $this->item->image_caption; ?>" >
-                <img style="margin: auto;" class="thumbnail" src="<?php echo Z2HelperImage::_($this->item->image,770,300); ?>" title="<?php echo $this->item->image_caption; ?>" alt="<?php echo $this->item->image_caption; ?>" />
+                <img style="margin: auto;max-width: 95%;" class="thumbnail" src="<?php echo Z2HelperImage::_($this->item->image,770,300); ?>" title="<?php echo $this->item->image_caption; ?>" alt="<?php echo $this->item->image_caption; ?>" />
             </a>
         <?php endif; ?>
         <?php if(!empty($this->item->addPic)): ?>
