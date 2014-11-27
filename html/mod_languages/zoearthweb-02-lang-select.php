@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
 </script>
 <div id="langSwitch" style="display:none;">
 <li class="dropdown active">
-    <a href="/joomla3_5/blog/amtb.html" data-toggle="dropdown" class="dropdown-toggle">
+    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">
         <?php echo $aLangs[Z2HelperLang::getNowLang()]['name']; ?>
         <b class="caret"></b>
     </a>
