@@ -1,6 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 $menu = $menus[key($menus)];
+$cc=0;
 ?>
 <div class="span6">
     <h5 class="title-bg"><?php echo $menu['name']?> 
@@ -13,7 +14,7 @@ $menu = $menus[key($menus)];
         <?php if (count($menu['menus']) > 0):?>
         <?php foreach ($menu['menus'] as $key=>$menuC):?>
             <?php if (Z2HelperImage::exist($menuC['image'])):?>
-            <div class="<?php echo $key == 0 ? 'active':'' ?> item">
+            <div class="<?php echo $cc == 0 ? 'active':'';$cc++; ?> item">
                 <a href="<?php echo $menuC['link']?>">
                     <img src="<?php echo Z2HelperImage::_($menuC['image'],370,220,'F')?>" alt="<?php echo $menuC['name']?>" class="align-left blog-thumb-preview" />
                 </a>
