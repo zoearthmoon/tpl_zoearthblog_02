@@ -21,7 +21,7 @@ defined('_JEXEC') or die;
                     <a href="<?php echo $menuC['link']?>" class="item-details-link"></a>
                 </span>
             </span>
-            <img src="<?php echo Z2HelperImage::_($menuC['image'],270,220,'F');?>" alt="<?php echo $menuC['name']?>">
+            <img src="<?php echo Z2HelperImage::_($menuC['image'],270,220,'FC');?>" alt="<?php echo $menuC['name']?>">
             <span class="project-details">
                 <a href="<?php echo $menuC['link']?>"><?php echo $menuC['name']?></a>
                 <?php echo Z2HelperUtilities::characterLimit($menuC['description'],20)?>
