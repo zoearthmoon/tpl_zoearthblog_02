@@ -63,3 +63,8 @@ defined('_JEXEC') or die;
         </div>
     </div>
 </article>
+<script language="Javascript">
+jQuery(document).ready(function() {
+    jQuery(".post-body div span img").parent().parent().addClass("text-center");
+});
+</script>
