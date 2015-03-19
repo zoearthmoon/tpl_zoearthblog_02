@@ -61,6 +61,18 @@ defined('_JEXEC') or die;
                 </li>
             </ul>
         </div>
+        <?php $tags = unset($tags[12]); ?>
+        <?php $tag = $tags[key($tags)]; ?>
+        <?php if ($tag > 0 ):?>
+            <?php $items = Z2HelperQueryData::getItems(array('tag'=>$tag,'limit'=>2,'order'=>'RAND'));?>
+            <?php if (count($items) > 0):?>
+            <ul class="pager">
+            <?php foreach ($items as $item): ?>
+                <li><i class="icon-thumbs-up" ></i><a href="<?php $item['link'] ?>"><?php $item['name'] ?></a></li>
+            <?php endforeach;?>
+            </ul>
+            <?php endif;?>
+        <?php endif;?>
     </div>
 </article>
 <script language="Javascript">
