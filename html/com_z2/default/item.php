@@ -53,26 +53,17 @@ defined('_JEXEC') or die;
                 <?php if (count($tags) > 0 ):?>
                 <li>
                 <i class="icon-tags"></i>
+                    <?php $i=0;?>
+                    <?php $nowTag=0;?>
                     <?php foreach ($tags as $key=>$tag):?>
-                        <?php echo $key>0 ? ', ':''?>
+                        <?php echo $i>0 ? ', ':'';$i++;?>
+                        <?php $nowTag = (!in_array($key,array(12,38)) ? $key:$nowTag);?>
                         <a href="<?php echo $tag['link']?>"><?php echo $tag['name']?></a>
                     <?php endforeach;?>
                 <?php endif;?>
                 </li>
             </ul>
         </div>
-        <?php $tags = unset($tags[12]); ?>
-        <?php $tag = $tags[key($tags)]; ?>
-        <?php if ($tag > 0 ):?>
-            <?php $items = Z2HelperQueryData::getItems(array('tag'=>$tag,'limit'=>2,'order'=>'RAND'));?>
-            <?php if (count($items) > 0):?>
-            <ul class="pager">
-            <?php foreach ($items as $item): ?>
-                <li><i class="icon-thumbs-up" ></i><a href="<?php $item['link'] ?>"><?php $item['name'] ?></a></li>
-            <?php endforeach;?>
-            </ul>
-            <?php endif;?>
-        <?php endif;?>
     </div>
 </article>
 <script language="Javascript">
@@ -80,3 +71,22 @@ jQuery(document).ready(function() {
     jQuery(".post-body div span img").parent().parent().addClass("text-center");
 });
 </script>
+
+<?php if ($nowTag > 0 ):?>
+    <?php $items = Z2HelperQueryData::getItems(array('notTtem'=>array($this->item->id),'tag'=>$nowTag,'limit'=>2,'order'=>'RAND'));?>
+    <?php if (count($items) > 0):?>
+    <h4 class="title-bg"><a name="comments"></a><?php echo JText::_('TPL_Z2B02_TAG_ART')?></h4>
+    <?php foreach ($items as $item): ?>
+        <section class="post-content">
+            <div class="post-body about-author">
+                <?php if (Z2HelperImage::exist($item['image'])):?>
+                <a href="<?php echo $item['link'] ?>">
+                <img src="<?php echo Z2HelperImage::_($item['image'],96,96,'FC') ?>">
+                </a>
+                <?php endif;?>
+                <h4><a href="<?php echo $item['link'] ?>"><?php echo $item['name'] ?></a></h4>
+            </div>
+        </section>
+    <?php endforeach;?>
+    <?php endif;?>
+<?php endif;?>
