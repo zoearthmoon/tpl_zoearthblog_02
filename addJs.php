@@ -9,7 +9,7 @@ $doc->addStyleSheet($tmpUrl.'css/bootstrap.css','text/css');
 $doc->addStyleSheet($tmpUrl.'css/bootstrap-responsive.css','text/css');
 $doc->addStyleSheet($tmpUrl.'css/prettyPhoto.css','text/css');
 $doc->addStyleSheet($tmpUrl.'css/flexslider.css','text/css');
-$doc->addStyleSheet($tmpUrl.'css/custom-styles.css','text/css');
+$doc->addStyleSheet($tmpUrl.'css/custom-styles.css?20150408','text/css');
 //$doc->addStyleSheet($tmpUrl.'css/style.css','text/css');
 
 //$doc->addScript($tmpUrl.'js/bootstrap.js');
