@@ -68,7 +68,7 @@ defined('_JEXEC') or die;
 </article>
 <script language="Javascript">
 jQuery(document).ready(function() {
-    jQuery(".post-body div span img").parent().parent().addClass("text-center");
+    //jQuery(".post-body div span img").parent().parent().addClass("text-center");
 });
 </script>
 
